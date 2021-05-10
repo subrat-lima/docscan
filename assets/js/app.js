@@ -8,6 +8,7 @@ const files = new Files();
 ui.files.addEventListener("change", (e) => {
   const fileList = e.target.files;
   handleFiles(fileList, files);
+  ui.showImages(files);
 });
 
 ui.uploadContainer.addEventListener("drop", (e) => {
@@ -16,4 +17,5 @@ ui.uploadContainer.addEventListener("drop", (e) => {
 
   const fileList = e.dataTransfer.files;
   handleFiles(fileList, files);
+  ui.showImages(files);
 });

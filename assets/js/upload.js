@@ -4,6 +4,7 @@ export const handleFiles = (fileList, files) => {
       continue;
 
     const img = document.createElement("img");
+    img.classList.add("preview__image");
     img.dataset.name = file.name;
 
     const reader = new FileReader();

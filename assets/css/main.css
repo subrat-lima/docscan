@@ -20,6 +20,7 @@ header,
 main {
   max-width: 1280px;
   margin: 1rem auto;
+  padding: 0 .5rem;
 }
 
 header {
@@ -59,6 +60,50 @@ header {
   max-width: 80vmin;
 }
 
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: strech;
+  margin: 0 auto;
+}
+
+.preview__image {
+  display: block;
+  max-width: 100%;
+  margin: .5rem;
+  cursor: pointer;
+}
+
 .hide {
   display: none;
+}
+
+@media screen and (min-width: 400px) {
+  .preview__image {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .preview__image {
+    width: calc(100% / 3 - 1rem);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .preview__image {
+    width: calc(25%  - 1rem);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .preview__image {
+    width: calc(20% - 1rem);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .preview__image {
+    width: calc(100% / 6 - 1rem);
+  }
 }
