@@ -2,9 +2,11 @@ export class UI {
   constructor() {
     this.uploadContainer = document.querySelector(".upload");
     this.previewContainer = document.querySelector(".preview");
+    this.previewImageContainer = document.querySelector(".preview__image__container");
     this.editorContainer = document.querySelector(".editor");
 
     this.files = document.getElementById("files");
+    this.previewSave = document.querySelector(".preview__save");
     this.editorImage = document.querySelector(".editor__image");
     this.editorClose = document.querySelector(".editor__close");
     this.editorSave = document.querySelector(".editor__save");
@@ -47,7 +49,7 @@ export class UI {
 
     for(let id in images) {
       images[id].dataset.id = id;
-      this.previewContainer.appendChild(images[id]);
+      this.previewImageContainer.appendChild(images[id]);
     }
   }
 }

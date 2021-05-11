@@ -3,7 +3,7 @@
   --secondary: black;
   --bg: #eee;
   --main: var(--primary);
-  --submit: aqua;
+  --submit: steelblue;
   --highlight: var(--submit);
   --cancel: crimson;
 }
@@ -30,6 +30,24 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+button {
+  margin: .5rem 1rem;
+  padding: .5rem 2rem;
+  background: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1px solid var(--highlight);
+  color: var(--highlight);
+  transition: .5s;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  color: white;
+  background: var(--highlight);
 }
 
 .logo {
@@ -63,7 +81,7 @@ header {
   max-width: 80vmin;
 }
 
-.preview {
+.preview__image__container {
   display: flex;
   flex-wrap: wrap;
   align-content: strech;
@@ -75,6 +93,11 @@ header {
   max-width: 100%;
   margin: .5rem;
   cursor: pointer;
+}
+
+.preview__actions {
+  display: flex;
+  justify-content: center;
 }
 
 .editor {
@@ -98,27 +121,10 @@ header {
   display: block;
 }
 
-.editor__button {
-  border: 1px solid var(--highlight);
-  padding: .5rem 2rem;
-  margin: .5rem 1rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-  color: var(--highlight);
-  background: none;
-  transition: 1s;
-}
-
 .editor__close {
   --highlight: var(--cancel);
 }
 
-.editor__button:hover,
-.editor__button:focus {
-  color: white;
-  background: var(--highlight);
-}
 
 .hide {
   display: none;

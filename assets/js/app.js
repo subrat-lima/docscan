@@ -2,6 +2,7 @@ import { UI } from "./ui.js";
 import { Files } from "./files.js";
 import { handleFiles } from "./upload.js";
 import { updateImage } from "./modify.js";
+import { saveFiles } from "./save.js";
 
 const ui = new UI();
 const files = new Files();
@@ -40,4 +41,8 @@ ui.editorSave.addEventListener("click", (e) => {
   updateImage(ui.editorImage, cropper, files);
 
   ui.editorContainer.classList.add("hide");
+});
+
+ui.previewSave.addEventListener("click", (e) => {
+  saveFiles(files);
 });
