@@ -2,22 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="theme-color" content="#4682B4">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Convert multiples document images to A4 size layout pdf quickly.">
   <title>DocScan</title>
   <link rel="shortcut icon" href="./assets/img/favicon.svg">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css" integrity="sha512-NCJ1O5tCMq4DK670CblvRiob3bb5PAxJ7MALAz2cV40T9RgNMrJSAwJKy0oz20Wu7TDn9Z2WnveirOeHmpaIlA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css" integrity="sha512-NCJ1O5tCMq4DK670CblvRiob3bb5PAxJ7MALAz2cV40T9RgNMrJSAwJKy0oz20Wu7TDn9Z2WnveirOeHmpaIlA==" crossorigin="anonymous" defer/>
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./assets/img/favicon.svg">
 </head>
 <body>
   <header>
-    <img src="./assets/img/favicon.svg" class="logo" alt="logo">
+    <img src="./assets/img/favicon.svg" class="logo" alt="logo" width="40" height="40">
     <h1>DocScan</h1>
   </header>
   <main>
     <section class="upload">
       <label for="files" class="upload__label">
-        <img src="./assets/img/upload.svg" class="upload__icon">
+        <img src="./assets/img/upload.svg" class="upload__icon" alt="upload icon">
         <input type="file" class="hide" accept="image/*" id="files" multiple>
       </label>
     </section>

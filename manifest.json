@@ -3,12 +3,13 @@
   "short_name": "DocScan",
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#FFDF00",
-  "background_color": "#FFDF00",
+  "theme_color": "#4682B4",
+  "background_color": "#4682B4",
   "icons": [
     {
       "src": "./assets/img/favicon.svg",
-      "sizes": "any"
+      "sizes": "48x48 72x72 96x96 128x128 256x256 512x512",
+      "purpose": "any maskable"
     }
   ]
 }

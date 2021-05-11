@@ -51,7 +51,7 @@ button:focus {
 }
 
 .logo {
-  width: 2.5rem;
+  width: 40px;
   margin: 0 .5rem;
 }
 
@@ -78,7 +78,7 @@ button:focus {
 
 .upload__icon {
   padding: 1.5rem;
-  max-width: 80vmin;
+  width: 80vmin;
 }
 
 .preview__image__container {
