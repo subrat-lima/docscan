@@ -3,6 +3,7 @@ import { Files } from "./files.js";
 import { handleFiles } from "./upload.js";
 import { updateImage } from "./modify.js";
 import { saveFiles } from "./save.js";
+import { installSW } from "./pwa.js";
 
 const ui = new UI();
 const files = new Files();
@@ -50,3 +51,5 @@ ui.previewSave.addEventListener("click", (e) => {
   ui.previewContainer.classList.add("hide");
   ui.uploadContainer.classList.remove("hide");
 });
+
+installSW();
