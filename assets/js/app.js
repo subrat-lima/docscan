@@ -45,4 +45,8 @@ ui.editorSave.addEventListener("click", (e) => {
 
 ui.previewSave.addEventListener("click", (e) => {
   saveFiles(files);
+
+  ui.previewImageContainer.innerHTML = "";
+  ui.previewContainer.classList.add("hide");
+  ui.uploadContainer.classList.remove("hide");
 });

@@ -6,7 +6,6 @@ export const saveFiles = (files) => {
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d");
 
-  const a = document.createElement("a");
   let scaleFactor;
   for(let image of files.getImages()) {
     let width = image.naturalWidth;
@@ -21,10 +20,15 @@ export const saveFiles = (files) => {
     ctx.scale(scaleFactor, scaleFactor);
     ctx.drawImage(image, 0, 0);
 
+    const a = document.createElement("a");
     a.href = canvas.toDataURL("image/jpeg", quality);
+    a.rel = "noopener noreferrer";
+    a.target = "_blank";
     a.download = image.dataset.name;
     a.click();
   }
+
+  files.resetImages();
 }
 
 const calculateScaleFactor = (width) => {

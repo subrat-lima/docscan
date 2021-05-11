@@ -1,5 +1,9 @@
 export class Files {
   constructor() {
+    this.init();
+  }
+
+  init() {
     this.images = [];
     this.length = 0;
   }
@@ -20,5 +24,9 @@ export class Files {
 
   getImages() {
     return this.images;
+  }
+
+  resetImages() {
+    this.init();
   }
 }
