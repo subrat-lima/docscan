@@ -1,6 +1,8 @@
 const a4_size = { width: 794, height: 1123 };
 
 export const saveFiles = (files) => {
+  const { jsPDF } = jspdf;
+
   const quality = 0.7;
 
   const canvas = document.createElement("canvas");
@@ -8,8 +10,8 @@ export const saveFiles = (files) => {
 
   let scaleFactor;
   for(let image of files.getImages()) {
-    let width = image.naturalWidth;
-    let height = image.naturalHeight;
+    const width = image.naturalWidth;
+    const height = image.naturalHeight;
     scaleFactor = calculateScaleFactor(width);
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -20,12 +22,12 @@ export const saveFiles = (files) => {
     ctx.scale(scaleFactor, scaleFactor);
     ctx.drawImage(image, 0, 0);
 
-    const a = document.createElement("a");
-    a.href = canvas.toDataURL("image/jpeg", quality);
-    a.rel = "noopener noreferrer";
-    a.target = "_blank";
-    a.download = image.dataset.name;
-    a.click();
+    const imageData = canvas.toDataURL("image/jpeg", quality);
+    const filename = image.dataset.name;
+
+    const pdf = new jsPDF();
+    pdf.addImage(imageData, "JPEG", 0, 0);
+    pdf.save(filename);
   }
 
   files.resetImages();
