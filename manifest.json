@@ -1,13 +1,13 @@
 {
   "name": "Document Scan",
   "short_name": "DocScan",
-  "start_url": "./index.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "theme_color": "#4682B4",
   "background_color": "#4682B4",
   "icons": [
     {
-      "src": "./assets/img/favicon.svg",
+      "src": "/img/favicon.svg",
       "sizes": "48x48 72x72 96x96 128x128 256x256 512x512",
       "purpose": "any maskable"
     }

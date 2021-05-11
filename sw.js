@@ -1,6 +1,6 @@
 const cacheName = "cache-v1.0";
 
-const precacheResources = ["/", "./index.html", "./assets/css/main.css", "./assets/img/favicon.svg", "./assets/img/upload.svg", "./assets/js/app.js", "./assets/js/ui.js", "./assets/js/files.js", "./assets/js/upload.js", "./assets/js/modify.js", "./assets/js/save.js", "./assets/js/pwa.js"];
+const precacheResources = ["/", "/index.html", "/css/main.css", "/img/favicon.svg", "/img/upload.svg", "/js/app.js", "/js/ui.js", "/js/files.js", "/js/upload.js", "/js/modify.js", "/js/save.js", "/js/pwa.js"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(cacheName).then(cache => cache.addAll(precacheResources)));

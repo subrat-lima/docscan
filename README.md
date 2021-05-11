@@ -1,4 +1,4 @@
-# docscan [Live Website](https://subrat-lima.github.io/docscan/)
+# docscan [Live Website](https://docscan.subratlima.xyz)
 A basic web application to convert doc images to pdf.
 
 ## Purpose
@@ -12,6 +12,8 @@ In this digital era, every now and then, we need some documents in pdf format fo
 
 ## Libraries
 [cropperjs](https://github.com/fengyuanchen/cropperjs): For image cropping functionality.
+
+
 [jsPDF](https://github.com/MrRio/jsPDF): For converting images to pdf.
 
 Huge thanks to the developers of these libraries.
