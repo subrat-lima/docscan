@@ -3,6 +3,9 @@
   --secondary: black;
   --bg: #eee;
   --main: var(--primary);
+  --submit: aqua;
+  --highlight: var(--submit);
+  --cancel: crimson;
 }
 
 * {
@@ -72,6 +75,49 @@ header {
   max-width: 100%;
   margin: .5rem;
   cursor: pointer;
+}
+
+.editor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: grid;
+  place-items: center;
+  padding: .5rem 1rem;
+}
+
+.editor__container {
+  max-height: 85vh;
+}
+
+.editor__image {
+  max-width: 100%;
+  display: block;
+}
+
+.editor__button {
+  border: 1px solid var(--highlight);
+  padding: .5rem 2rem;
+  margin: .5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--highlight);
+  background: none;
+  transition: 1s;
+}
+
+.editor__close {
+  --highlight: var(--cancel);
+}
+
+.editor__button:hover,
+.editor__button:focus {
+  color: white;
+  background: var(--highlight);
 }
 
 .hide {

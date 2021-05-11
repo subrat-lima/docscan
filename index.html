@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DocScan</title>
   <link rel="shortcut icon" href="/assets/img/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css" integrity="sha512-NCJ1O5tCMq4DK670CblvRiob3bb5PAxJ7MALAz2cV40T9RgNMrJSAwJKy0oz20Wu7TDn9Z2WnveirOeHmpaIlA==" crossorigin="anonymous" />
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
@@ -20,7 +21,17 @@
       </label>
     </section>
     <section class="preview hide"></section>
+    <section class="editor hide">
+      <div class="editor__container">
+        <img src="#" alt="edit image" class="editor__image">
+      </div>
+      <div class="editor__actions">
+        <button class="editor__button editor__close">Cancel</button>
+        <button class="editor__button editor__save">Save</button>
+      </div>
+    </section>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js" integrity="sha512-FHa4dxvEkSR0LOFH/iFH0iSqlYHf/iTwLc5Ws/1Su1W90X0qnxFxciJimoue/zyOA/+Qz/XQmmKqjbubAAzpkA==" crossorigin="anonymous"></script>
   <script src="/assets/js/app.js" type="module"></script>
 </body>
 </html>

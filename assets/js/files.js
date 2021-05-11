@@ -14,6 +14,10 @@ export class Files {
     this.length--;
   }
 
+  updateImage(index, src) {
+    this.images[index].src = src;
+  }
+
   getImages() {
     return this.images;
   }
